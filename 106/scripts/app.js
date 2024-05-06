@@ -1,22 +1,35 @@
-function sayHello()
+function saveTask()
 {
-    console.log("Hello there");
+    console.log("saving tasks");
+    //get values
+    const title = $("#inputTitle").val();
+    const desc = $("#inputDescription").val();
+    const color = $("#inputColor").val();
+    const date = $("#inputDate").val();
+    const status = $("#inputStatus").val();
+    const budget = $("#inputBudget").val();    
+    console.log(title, desc, color, date, status, budget);
+    //build an object
+    
+   
+
+    //save to the sever
+   
+
+    //display the task
+  
+  
+}
+
+
+
+function init() {
+    //load data  
+    //retrive data
+    //hook events
+    $("#btnSave").click(saveTask);//this is usign jQuery
+   
     
 }
-function sayGoodBye(name,lastName){
-    console.log("Adios! "+name+" "+lastName);
-    var color = "blue";
-}
 
-function init()
-{
-    console.log("hello world");
-    // if the user pays they can visit
-    // {
-    sayHello();
-    let x = "adrian";
-    sayGoodBye(x,"Aguinaga");
-    // }
-}
-
-window.onload = init;//avoid the init()
+window.onload = init;
